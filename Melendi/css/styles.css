@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+body { 
+    background-image: url(../img/melendiconcert.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+} */
+
+
+#header {
+
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(black, transparent)
+        /* position: static; */
+        /* font-style: normal; */
+}
+
+#link-header {
+    float: none;
+    color: rgb(255, 233, 233);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 1EM;
+    font-size: 1.2em;
+
+}
+
+#link-header:hover {
+    color: #0b76a6;
+}
+
+#link-header .site-name {
+    font-weight: 700;
+    font-size: 1.2em;
+    position: static;
+}
+
+
+#link.site-desc {
+    margin-left: 25%;
+    font-weight: 100;
+    font-size: 1.5em;
+    color: #ffffff;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header i {
+    margin-top: 1.5em;
+    margin-left: 0.7em;
+    color: white;
+
+    /* display: block; */
+}
+
+#header i:hover {
+    color: #0b76a6;
+    cursor: pointer;
+
+}
+
+#side-menu {
+    position: absolute;
+    /* margin-top: 3em; */
+    left: -90vw;
+    width: 45vw;
+    height: 100vh;
+    background-color: #00202d;
+    background-image: url(../img/melendi.jpg);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.side-name-menu {
+    float: none;
+    /* font-family:Arial, Helvetica, sans-serif; */
+    color: white;
+    /* font-family:Arial, Helvetica, sans-serif ; */
+    margin-left: 0.5em;
+    /* font-weight: 100; */
+    font-size: x-large;
+    margin-top: 0.5em;
+}
+
+#side-menu .link {
+    float: none;
+    /* font-family:Arial, Helvetica, sans-serif; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 3em;
+    /* font-weight: 100; */
+    font-size: medium;
+    margin-bottom: 2em;
+    margin-top: 2em;
+
+}
+
+#side-menu i {
+    margin-top: 2em;
+    margin-left: 1.3em;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+
+#side-menu i:hover {
+    color: #0b76a6;
+}
+
+.side-menu-open {
+    transition: transform 0.7s;
+    transform: translate(90vw);
+}
+
+.side-menu-hide {
+    transition: transform 1s;
+    transform: translate(0vw);
+}
+
+#content {
+    width: 100vw;
+    height: 100vh;
+}
+
+#content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+#albums-container .albums-title{
+    
+    margin-top:6%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11em;
+    text-align: center;
+}
+#albums-container .albums-title {
+    /* width: 300px;
+    height: 200px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+#albums-container .albums-title {
+    
+    text-decoration: none;
+    border: 2px solid #000000;
+    padding: 15px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display:flex;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+span {
+    position: relative;
+    /* z-index coz when we put bg to before and after this span text will not be visible */
+    z-index: 3;
+}
+
+/* Button 1 styles */
+
+#albums-container .albums-title::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -2px;
+    width: calc(100% + 6px);
+    /*100% plus double the times left values*/
+    height: calc(100% - 10px);
+    background-color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    transform: scaleY(1);
+}
+
+#albums-container .albums-title:hover::before {
+    transform: scaleY(0);
+}
+
+#albums-container .albums-title::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -5px;
+    width: calc(100% - 10px);
+    /*100% plus double the times left values*/
+    height: calc(100% + 10px);
+    background-color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    transform: scaleX(1);
+}
+
+
+#albums-container .albums-title:hover::after {
+    transform: scaleX(0);
+}
+
+.container {
+    
+    width: 99vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.image-container {
+    border: 23px solid #000000;
+    width: 50vw;
+    border-collapse: separate;
+    border-spacing: 10em 10em;  
+}
+
+
+.image-container img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-text {
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+* {
+    border-spacing: 10em 10em;  
+    border-collapse: separate;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+footer {
+    text-align: center;
+    height: 10vw;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    /* font-style: normal; */
+}
+
+
+.content-footer {
+    font-weight: 300;
+    font-size: 5em;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Extra small devices (phones, 600px and down)   */
+@media only screen and (max-width: 600px) {
+    .content-footer {
+        text-align: center;
+        font-weight: 250;
+        font-size: 1em;
+        color: #ffffff;
+    }
+
+    .image-container img {
+
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    #albums-container .albums-title {
+        margin-top: 5%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    /* #albums-container .albums-title {
+        margin-left: 5em;
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } */
+    .container {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    
+    .img-text {
+        font-size: 0.5em;
+        text-align: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    
+    }
+    
+
+}
+
+
+
+/* Small devices (tabletas y moviles largos, 600px and up)  */
+@media only screen and (min-width: 600px) {
+
+    .image-container {
+        width: 40vw;
+    }
+
+    #header i {
+        width: 3vw;
+        margin-left: 2em;
+    }
+
+    #side-menu i {
+        margin-left: 2em;
+
+    }
+
+    #albums-container .albums-title {
+        margin-top: 10%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .content-footer {
+        font-weight: 300;
+        font-size: 1.5em;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    
+    /* #albums-container .albums-title {
+        margin-left: 9em;
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } */
+}
+
+
+/* Medium devices (apaisado tablets, 768px and up)  */
+@media only screen and (min-width: 768px) {
+    #header i {
+        width: 3vw;
+        margin-left: 3em;
+    }
+
+    #side-menu i {
+        margin-left: 4em;
+
+    }
+
+    .image-container {
+        width: 30vw;
+    }
+
+    #albums-container .albums-title {
+        margin-top: 6%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .content-footer {
+        font-weight: 300;
+        /* font-size: 3em; */
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /* #albums-container .albums-title {
+        margin-left: 6.5em;
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } */
+
+}
+
+/* Large devices (laptops/desktops, 992px and up)  */
+@media only screen and (min-width: 992px) {
+.image-container {
+
+    width: 20vw;
+}
+/* #albums-container .albums-title{
+    margin-top:6%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    text-align: center;
+} */
+
+.content-footer{
+    font-weight: 300;
+    font-size: 2em;
+    color: #ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up)  
+@media only screen and (min-width: 1200px) {    
+    .image-container {
+    width: 10vw;
+}
+} */
