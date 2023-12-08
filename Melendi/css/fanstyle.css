@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+.row>* {
+    background-image:url(/img/melendi-noticias.jpg);
+    background-size: cover;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: 6vh;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#content{
+    z-index: 10000;
+}
+
+
+button {
+    align-items: center;
+}
+
+#header {
+    /* position: absolute; */
+    width: 100vw;
+    background: linear-gradient(black, transparent)
+        /* position: static; */
+        /* font-style: normal; */
+}
+
+#link-header {
+    float: none;
+    color: rgb(255, 233, 233);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 1EM;
+    font-size: 1.2em;
+}
+
+#link-header:hover {
+    color: #0b76a6;
+}
+
+#link-header .site-name {
+    font-weight: 700;
+    font-size: 1.2em;
+    position: static;
+}
+
+
+#link.site-desc {
+    margin-left: 25%;
+    font-weight: 100;
+    font-size: 1.5em;
+    color: #ffffff;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header i {
+    margin-top: 1.5em;
+    margin-left: 0.7em;
+    color: white;
+
+    /* display: block; */
+}
+
+#header i:hover {
+    color: #0b76a6;
+    cursor: pointer;
+
+}
+
+#side-menu {
+    position: absolute;
+    /* margin-top: 3em; */
+    left: -90vw;
+    width: 45vw;
+    height: 100vh;
+    background-color: #00202d;
+    background-image: url(../img/melendi.jpg);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.side-name-menu {
+    float: none;
+    /* font-family:Arial, Helvetica, sans-serif; */
+    color: white;
+    /* font-family:Arial, Helvetica, sans-serif ; */
+    margin-left: 0.5em;
+    /* font-weight: 100; */
+    font-size: x-large;
+    margin-top: 0.5em;
+}
+
+#side-menu .link {
+    float: none;
+    /* font-family:Arial, Helvetica, sans-serif; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 3em;
+    /* font-weight: 100; */
+    font-size: medium;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+#side-menu i {
+    margin-top: 2em;
+    margin-left: 1.3em;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#side-menu i:hover {
+    color: #0b76a6;
+}
+
+.side-menu-open {
+    transition: transform 0.7s;
+    transform: translate(90vw);
+}
+
+.side-menu-hide {
+    transition: transform 1s;
+    transform: translate(0vw);
+}
+
+#content {
+    width: 100%;
+    height: 100vh;
+}
+
+#content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-image:url(../img/melendi-noticias.jpg);
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+@media only screen and (min-width: 600px) {
+    body{
+    background-image:url(../img/melendi-noticias.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+}
+@media only screen and (min-width: 768px) {
+    body{
+        background-image:url(../img/melendi-noticias.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    body{
+        background-image:url(../img/melendi-noticias.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    body{
+        background-image:url(../img/melendi-noticias.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
