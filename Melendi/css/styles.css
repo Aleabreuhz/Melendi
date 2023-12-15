@@ -11,7 +11,6 @@
 
 body {
   height: 100%;
-  /* scrollbar-gutter: stable both-sides; */
   overflow-x: hidden;
 }
 
@@ -21,8 +20,6 @@ body {
   position: absolute;
   width: 100%;
   background: linear-gradient(black, transparent)
-    /* position: static; */
-    /* font-style: normal; */
 }
 
 #link-header {
@@ -58,20 +55,16 @@ body {
   margin-top: 1.5em;
   margin-left: 0.7em;
   color: white;
-
-  /* display: block; */
 }
 
 #header i:hover {
   color: #0b76a6;
   cursor: pointer;
-
 }
 
 #side-menu {
   z-index: 33;
   position: absolute;
-  /* margin-top: 3em; */
   left: -90vw;
   width: 45vw;
   height: 100vh;
@@ -85,25 +78,19 @@ body {
   float: none;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  /* font-family:Arial, Helvetica, sans-serif ; */
   margin-left: 0.5em;
-  /* font-weight: 100; */
   font-size: x-large;
   margin-top: 0.5em;
 }
 
 #side-menu .link {
-
-  /* font-family:Arial, Helvetica, sans-serif; */
   color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 3em;
-  /* font-weight: 100; */
   font-size: medium;
   margin-bottom: 2em;
   margin-top: 2em;
   text-decoration: none;
-
 }
 
 #side-menu i {
@@ -131,7 +118,6 @@ body {
   position: relative;
   width: 100vw;
   height: 65vw;
-  /* overflow: hidden; */
 }
 
 #content img {
@@ -151,8 +137,6 @@ body {
 }
 
 #albums-container .albums-title {
-  /* width: 300px;
-    height: 200px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,7 +160,6 @@ body {
 
 span {
   position: relative;
-  /* z-index coz when we put bg to before and after this span text will not be visible */
   z-index: 3;
 }
 
@@ -188,7 +171,6 @@ span {
   top: 5px;
   left: -2px;
   width: calc(100% + 6px);
-  /*100% plus double the times left values*/
   height: calc(100% - 10px);
   background-color: #ffffff;
   transition: all 0.5s ease-in-out;
@@ -205,7 +187,6 @@ span {
   left: 5px;
   top: -5px;
   width: calc(100% - 10px);
-  /*100% plus double the times left values*/
   height: calc(100% + 10px);
   background-color: #ffffff;
   transition: all 0.5s ease-in-out;
@@ -237,7 +218,6 @@ span {
 
 
 .image-container img {
-  /* scale: 90%; */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -247,15 +227,15 @@ span {
   text-align: center;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 #events img {
   width: 100%;
-
 }
 
-
+video {
+margin-left: 30%;
+}
 
 footer {
   margin: 0;
@@ -268,7 +248,6 @@ footer {
   width: 100%;
   background-color: rgb(0, 0, 0);
   position: absolute;
-  /* font-style: normal; */
 }
 
 
@@ -287,6 +266,10 @@ footer {
     overflow-x: hidden;
   }
   
+  #mel{
+    left:0px ;
+  }
+
   #content {
     position: relative;
     width: 100%;
@@ -305,6 +288,13 @@ footer {
     color: #ffffff;
   }
 
+  .image-container {
+    border: 11px solid #000000;
+    width: 30vw;
+    border-collapse: separate;
+    border-spacing: 10em 10em;
+
+  }
   .image-container img {
 
     width: 100%;
@@ -335,7 +325,7 @@ footer {
   }
 
   .img-text {
-    font-size: 0.5em;
+    font-size: 0.4em;
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -368,6 +358,14 @@ footer {
 
   .image-container {
     width: 40vw;
+  }
+
+  .img-text {
+    font-size: 0.55em;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
   }
 
   #header i {
@@ -419,6 +417,8 @@ footer {
     width: 100%;
   }
 
+  
+
   #header i {
     width: 3vw;
     margin-left: 3em;
@@ -435,6 +435,13 @@ footer {
     flex-wrap: wrap;
   } */
 
+  .img-text {
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
   #albums-container .albums-title {
     margin-top: 6%;
     font-family: Arial, Helvetica, sans-serif;
@@ -474,7 +481,13 @@ footer {
   .image-container {
     width: 30vw;
   }
+  .img-text {
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 
+  }
   /* #albums-container .albums-title{
     margin-top:6%;
     font-family: Arial, Helvetica, sans-serif;

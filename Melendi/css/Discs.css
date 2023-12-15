@@ -1,0 +1,32 @@
+body{
+    background-color: #000 ;
+}
+
+
+.left-side {
+    border-style: inset;
+    border-color: black;
+    border-radius: 12px;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+#name-error {
+    visibility: hidden;
+    height: 0px;
+    color: red;
+}
+
+#year-error {
+    visibility: hidden;
+    height: 0px;
+    color: red;
+}
+
+.left-side:hover {
+    border-style: dotted;
+}
+
+.album {
+    padding-bottom: 5px;
+}

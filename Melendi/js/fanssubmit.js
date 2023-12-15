@@ -2,6 +2,18 @@ let listPeople = [
 
 ];
 
+function getEmail() {
+    return document.getElementById('inputEmail').value;
+}
+
+function getName() {
+    return document.getElementById('inputName').value;
+}
+
+function getPhone() {
+    return document.getElementById('inputPhone').value;
+}
+
 function initialize() {
     const headerMenuIcon = document.getElementById("header-menu-icon");
     headerMenuIcon.addEventListener("click", showSideMenu);
@@ -26,31 +38,19 @@ function showSideMenu() {
 
 function hideSideMenu() {
     const sideMenu = document.getElementById("side-menu");
-sideMenu.classList.add("side-menu-hide");
-sideMenu.classList.remove("side-menu-open");
+    sideMenu.classList.add("side-menu-hide");
+    sideMenu.classList.remove("side-menu-open");
 }
 
-function addUser(){
-    let email = document.getElementById('inputEmail').value;
-    let name = document.getElementById('inputName').value;
-    let phone = document.getElementById('inputPhone').value;
+function addUser() {
 
-    if(email == ""){
-        alert('El campo correo es requerido');
-        return false;
-    } else if (!email.includes('@')){
-        alert('El corrreo no es valido')
-        return false;
+    if(!validate()){
+        return;
     }
-    if(name == ""){
-        alert('El campo nombre es requerido');
-        return false;
-    }
-    if(phone == ""){
-        alert('El campo numero es requerido');
-        return false;
-    }
-    return true;
+
+    let email = getEmail();
+    let name = getName();
+    let phone = getPhone(); 
 
     listPeople.push({
         email: email,
@@ -59,17 +59,43 @@ function addUser(){
 
     })
     const peopleInStringFormat = JSON.stringify(listPeople);
-    localStorage.setItem("listPeople",peopleInStringFormat);
+    localStorage.setItem("listPeople", peopleInStringFormat);
 
+    alert("Usuario creado correctamente");
+}
+
+function validate(){
+
+    let email = getEmail();
+    let name = getName();
+    let phone = getPhone(); 
+
+    if (email == "") {
+        alert('El campo correo es requerido');
+        return false;
+    } else if (!email.includes('@')) {
+        alert('El corrreo no es valido')
+        return false;
+    }
+    if (name == "") {
+        alert('El campo nombre es requerido');
+        return false;
+    }
+    if (phone == "") {
+        alert('El campo numero es requerido');
+        return false;
+    }
+
+    return true;
 }
 
 
-function ReadData(){
+function ReadData() {
     let listPeople;
 
     if (localStorage.getItem('listPeople') == null) {
-    listPeople = [];
-    } else{
+        listPeople = [];
+    } else {
         listPeople = JSON.parse(localStorage.getItem('listPeople'))
     }
 }
