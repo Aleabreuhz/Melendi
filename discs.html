@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/Discs.css">
+</head>
+
+<body>
+    <!-- Header -->
+  <div id="header">
+    <i class="fa-solid fa-bars fa-2xl" id="header-menu-icon"></i>
+    <a id="link-header" href="index.html">
+      <span class="site-name">Melendi </span>
+
+    </a>
+  </div>
+  <!-- Header -->
+
+  <!-- Side menu  -->
+  <div id="side-menu">
+    <i class="fa-solid fa-xmark fa-lg" id="side-menu-hide"></i>
+    <span class="side-name-menu">Menú</span>
+    <div>
+      <p class="link"><a href="fanclub.html">Iniciar sesión</a></p>
+      <p class="link">Conciertos</p>
+      <p class="link">Discos</p>
+      <p class="link">Merchandising</p>
+      <p class="link">Fotos y Videos</p>
+    </div>
+  </div>
+  <!-- Side menu  -->
+    <div class="container">
+        <div class="row">
+            <!-- background -->
+            <div class="col-sm-6">
+                <div class="left-side">
+                    <form id="albums-form" action="index.html">
+                        <div class="mb-3 mt-3">
+                            <label for="name" class="form-label">Nombre:</label>
+                            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                            <span id="name-error"> Field can not be empty </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="year" class="form-label">Año:</label>
+                            <input type="year" class="form-control" id="year" placeholder="Enter year" name="year">
+                            <span id="year-error">Year is mandatory</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="left-side">
+                    <h2>Lista de albumes</h2>
+                    <ul id="albums-list">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/Discs.js"></script>
+    <script src="https://kit.fontawesome.com/f3ff052fd0.js" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
